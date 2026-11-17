@@ -1,0 +1,24 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars.backup
+crash.log
+override.tf
+.terraformrc
+terraform.rc
+
+# Secrets
+secrets.tfvars
+
+# Binaries
+terraform.exe
+terraform
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
