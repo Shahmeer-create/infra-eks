@@ -98,6 +98,18 @@ resource "aws_iam_role_policy" "github_oidc_infra" {
         Resource = "arn:aws:dynamodb:${var.aws_region}:${data.aws_caller_identity.current.account_id}:table/myapp-terraform-locks"
       },
       {
+        Sid      = "SQS"
+        Effect   = "Allow"
+        Action   = ["sqs:*"]
+        Resource = "*"
+      },
+      {
+        Sid      = "KMS"
+        Effect   = "Allow"
+        Action   = ["kms:*"]
+        Resource = "*"
+      },
+      {
         Sid      = "Amplify"
         Effect   = "Allow"
         Action   = ["amplify:*"]
